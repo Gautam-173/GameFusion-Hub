@@ -1,0 +1,259 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+    perspective: 1200px;
+}
+
+/* Background Animations */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
+    filter: brightness(0.4);
+}
+
+/* Header */
+header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #00e5ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.9), 0 0 30px rgba(0, 255, 204, 0.7);
+    animation: glow 1.5s infinite alternate;
+}
+/* Keyboard Frame Styling */
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr); /* Adjust the number of columns as needed */
+    gap: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    margin: 20px auto;
+    max-width: 900px; /* Increased max width for a wider keyboard */
+}
+
+/* Key Styling */
+#keyboard .key {
+    background-color: #00e5ff; /* Bright key color */
+    color: #121212; /* Text color */
+    padding: 20px;
+    border-radius: 8px; /* More rounded corners */
+    text-align: center;
+    font-size: 1.6rem; /* Slightly larger font size */
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s; /* Added background-color transition */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+#keyboard .key:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 204, 0.8);
+    background-color: #00b2e5; /* Change color on hover */
+}
+
+#keyboard .key:active {
+    transform: scale(0.95);
+    background-color: #0097a7; /* Darker color on active */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #keyboard {
+        grid-template-columns: repeat(7, 1fr); /* Fewer columns on smaller screens */
+    }
+
+    #keyboard .key {
+        padding: 15px;
+        font-size: 1.4rem; /* Slightly smaller font size on mobile */
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 15px rgba(0, 255, 204, 0.9), 0 0 40px rgba(0, 255, 204, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(0, 255, 204, 1), 0 0 50px rgba(0, 255, 204, 0.7);
+    }
+}
+
+header p {
+    font-size: 1.4rem;
+    color: #bbb;
+}
+
+/* Main Game Container */
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    padding: 20px;
+    transform: perspective(1200px);
+}
+
+/* Game Card Styling */
+.game-card {
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    width: 320px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    position: relative;
+    transform: rotateY(0deg);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.game-card:hover {
+    transform: translateY(-15px) rotateY(15deg);
+    box-shadow: 0 30px 50px rgba(0, 255, 204, 0.8);
+}
+
+.game-card h2 {
+    font-size: 1.8rem;
+    color: #00ffcc;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: textPop 1s ease-out infinite alternate;
+}
+
+@keyframes textPop {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.game-card p {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Play Button */
+.reset-button {
+    background-color: #00e5ff;
+    color: #121212;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 6px 25px rgba(0, 255, 204, 0.6);
+    transform-style: preserve-3d;
+}
+
+.reset-button:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.8);
+}
+
+.reset-button:active {
+    transform: scale(0.98);
+    background-color: #006d6b;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+    color: #ccc;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* Particle Effects (Optional) */
+.particle-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .game-card {
+        width: 250px;
+        height: auto;
+    }
+
+    .game-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .game-card p {
+        font-size: 1rem;
+    }
+
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
