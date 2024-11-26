@@ -1,0 +1,290 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    background-color: #121212; /* Dark background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: radial-gradient(circle, #1f2b34, #28343f);
+    overflow: hidden;
+    animation: backgroundPulse 5s infinite ease-in-out; /* Subtle background pulse */
+}
+
+/* Game Container */
+.game-container {
+    background: linear-gradient(45deg, #00c6ff, #0072ff); /* Electric blue gradient */
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 10px 70px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 2s ease-out infinite; /* Subtle game pulse animation */
+    transform-style: preserve-3d;
+    transition: all 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6), 0px 0px 50px rgba(255, 255, 255, 0.4);
+    transition: all 0.5s ease-in-out; /* Smooth transition for title */
+}
+
+h1:hover {
+    transform: scale(1.05);
+    text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.9); /* Stronger glow on hover */
+}
+
+/* Choices Section (Rock, Paper, Scissors) */
+.choices {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.choice {
+    font-size: 5rem;
+    background-color: #34495e;
+    border: 3px solid #f39c12;
+    border-radius: 15px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.4s ease, filter 0.3s ease;
+    position: relative;
+    will-change: transform, box-shadow;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Glow effect for choices */
+}
+
+.choice:hover {
+    transform: scale(1.2) rotateY(15deg); /* Enhanced 3D Hover effect */
+    background-color: #f39c12;
+    box-shadow: 0 20px 30px rgba(243, 156, 18, 0.7);
+    filter: brightness(1.2);
+}
+
+.choice:active {
+    transform: scale(0.95);
+    background-color: #e67e22;
+}
+
+.choice:focus {
+    outline: none;
+}
+
+/* Smooth transition for choices */
+.choice.rock, .choice.paper, .choice.scissors {
+    animation: scaleUp 0.3s ease forwards;
+}
+
+@keyframes scaleUp {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Timer Animation */
+#timer {
+    font-size: 4.5rem;
+    color: #e74c3c;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px rgba(231, 76, 60, 0.9);
+    animation: blink 1.5s infinite ease-in-out;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Result Display */
+.game-status {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+#userChoice, #computerChoice, #outcome {
+    font-size: 1.6rem;
+    margin: 15px 0;
+}
+
+#userChoice span, #computerChoice span {
+    font-weight: bold;
+    color: #fefeff; /* Blue for user's choices */
+}
+
+#outcome span {
+    font-weight: bold;
+    color: #e74c3c; /* Red for outcome */
+    font-size: 2rem;
+}
+
+/* Scoreboard */
+.scoreboard {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Subtle shadow for scoreboard */
+}
+
+.scoreboard p {
+    margin: 5px 0;
+}
+
+/* Restart Button Styles */
+button {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    will-change: transform, box-shadow;
+    margin-top: 30px;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300%;
+    height: 100%;
+    background-color: #00796b;
+    transition: all 0.6s ease;
+    transform: translateX(-50%) translateY(-100%);
+    border-radius: 15px;
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+button:hover:before {
+    transform: translateX(-50%) translateY(0);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* Reset Button Styles */
+.reset-button {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    will-change: transform, box-shadow;
+    margin-top: 20px; /* Space between restart and reset */
+}
+
+.reset-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300%;
+    height: 100%;
+    background-color: #c0392b;
+    transition: all 0.6s ease;
+    transform: translateX(-50%) translateY(-100%);
+    border-radius: 15px;
+}
+
+.reset-button:hover {
+    transform: translateY(-5px);
+}
+
+.reset-button:hover:before {
+    transform: translateX(-50%) translateY(0);
+}
+
+.reset-button:active {
+    transform: translateY(2px);
+}
+
+/* Background Animation */
+@keyframes backgroundPulse {
+    0% {
+        background-image: radial-gradient(circle, #1f2b34, #28343f);
+    }
+    50% {
+        background-image: radial-gradient(circle, #273c5f, #1e295d);
+    }
+    100% {
+        background-image: radial-gradient(circle, #1f2b34, #28343f);
+    }
+}
+
+/* Parallax Effect for Background */
+body {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .choice {
+        font-size: 4rem;
+        width: 100px;
+        height: 100px;
+    }
+
+    .scoreboard {
+        font-size: 1.2rem;
+    }
+
+    #timer {
+        font-size: 3.5rem;
+    }
+
+    #userChoice, #computerChoice, #outcome {
+        font-size: 1.4rem;
+    }
+}
