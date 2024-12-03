@@ -1,8 +1,6 @@
-GameFusion is a web-based platform featuring a collection of engaging mini-games. This project includes classic games like Tic Tac Toe, Hangman, Rock, Paper, Scissors, Blackjack, and a Story Creator, providing fun and entertainment for users of all ages.
-
 # GameFusion Hub
 
-GameFusion Hub is a platform for gamers and developers to discover, share, and collaborate on gaming projects. Whether you're looking for new games, connecting with other gamers, or showcasing your own creations, GameFusion Hub is here to enhance your gaming experience.
+GameFusion is a web-based platform featuring a collection of engaging mini-games. This project includes classic games like Tic Tac Toe, Hangman, Rock, Paper, Scissors, Blackjack, and a Story Creator, providing fun and entertainment for users of all ages.
 
 ## Features
 
@@ -10,19 +8,10 @@ GameFusion Hub is a platform for gamers and developers to discover, share, and c
 - **User  Profiles**: Create and customize profiles to display gaming achievements.
 - **Collaboration Tools**: Connect with developers and gamers for project collaboration.
 - **Community Engagement**: Participate in discussions and events.
-- **Resource Sharing**: Access and share game assets and tutorials.
-Features
 
-
-Tic Tac Toe: Challenge a friend in this classic game of Xs and Os.
-
-Hangman: Guess the word before the man is hanged.
-
-Rock, Paper, Scissors: Play against the computer in this quick game.
-
-Blackjack: Try to get as close to 21 without going over.
-
-Story Creator: Create and save your own stories.
-
-
-https://github.com/user-attachments/assets/ee072db7-27f7-4fdf-980c-63e8e1ad8316
+## Games Included 
+-**Tic-Tac-Toe**: Challenge a friend in this classic game of Xs and Os.
+-**Hangman**: Guess the word before the man is hanged.
+-**Rock-Paper-Scissors**: Play against the computer in this quick game.
+-**Blackjack**: Try to get as close to 21 without going over.
+-**Story-Creator**: Create and save your own stories.
