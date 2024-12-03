@@ -10,8 +10,8 @@ GameFusion is a web-based platform featuring a collection of engaging mini-games
 - **Community Engagement**: Participate in discussions and events.
 
 ## Games Included 
--**Tic-Tac-Toe**: Challenge a friend in this classic game of Xs and Os.
--**Hangman**: Guess the word before the man is hanged.
--**Rock-Paper-Scissors**: Play against the computer in this quick game.
--**Blackjack**: Try to get as close to 21 without going over.
--**Story-Creator**: Create and save your own stories.
+- **Tic Tac Toe**: Challenge a friend in this classic game of Xs and Os.
+- **Hangman**: Guess the word before the man is hanged.
+- **Rock Paper Scissors**: Play against the computer in this quick game.
+- **Blackjack**: Try to get as close to 21 without going over.
+- **Story Creator**: Create and save your own stories.
