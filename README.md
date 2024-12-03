@@ -15,3 +15,5 @@ GameFusion is a web-based platform featuring a collection of engaging mini-games
 - **Rock Paper Scissors**: Play against the computer in this quick game.
 - **Blackjack**: Try to get as close to 21 without going over.
 - **Story Creator**: Create and save your own stories.
+
+https://github.com/user-attachments/assets/dd18264f-6142-4bd4-98bb-0da52540d114
