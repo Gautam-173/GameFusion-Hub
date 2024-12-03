@@ -2,12 +2,14 @@
 
 GameFusion is a web-based platform featuring a collection of engaging mini-games. This project includes classic games like Tic Tac Toe, Hangman, Rock, Paper, Scissors, Blackjack, and a Story Creator, providing fun and entertainment for users of all ages.
 
-## Features
+## Contributing
+Contributions are welcome! If you'd like to contribute, please follow these steps:
 
-- **Game Discovery**: Explore a variety of games across different genres.
-- **User  Profiles**: Create and customize profiles to display gaming achievements.
-- **Collaboration Tools**: Connect with developers and gamers for project collaboration.
-- **Community Engagement**: Participate in discussions and events.
+- Fork the repository.
+- Create a new branch for your feature or bug fix.
+- Make your changes and commit them.
+- Push to your forked repository.
+- Submit a pull request.
 
 ## Games Included 
 - **Tic Tac Toe**: Challenge a friend in this classic game of Xs and Os.
@@ -15,5 +17,10 @@ GameFusion is a web-based platform featuring a collection of engaging mini-games
 - **Rock Paper Scissors**: Play against the computer in this quick game.
 - **Blackjack**: Try to get as close to 21 without going over.
 - **Story Creator**: Create and save your own stories.
+
+## Contact
+- For any inquiries or feedback, please reach out to the project maintainer at [gautamtpc173@gmail.com].
+
+
 
 https://github.com/user-attachments/assets/dd18264f-6142-4bd4-98bb-0da52540d114
